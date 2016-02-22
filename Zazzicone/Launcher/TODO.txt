@@ -1,0 +1,3 @@
+﻿RulesSelector (only rules the user can actually use (cannot use two if it's already taken, bla bla...))
+RulesApplier (applies all the rules and gets the results)
+RulesAggregator (decide which rules is most suitable and presents the options in order)
