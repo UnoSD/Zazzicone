@@ -65,7 +65,9 @@ namespace Launcher
             _scoreGenerator.Rules.Clear();
             _scoreGenerator.Rules.AddRange(_playersUsedRules[player]);
 
-            var applicableRules = _scoreGenerator.GetApplicableRules(dices);
+            var applicableRules = _scoreGenerator.GetApplicableRules(dices).ToArray();
+
+            _logger.Log(LogLevel.Trace, $"{player.Name} can use: {applicableRules.ToCommaSeparatedString(rule => rule.GetType().Name)}");
 
             // TODO: Choose which one, for now we will choose the best.
             var highestScoreRule = applicableRules.Select(rule => new { Rule = rule, Result = rule.Apply(dices) }).OrderBy(arg => arg.Result).LastOrDefault();

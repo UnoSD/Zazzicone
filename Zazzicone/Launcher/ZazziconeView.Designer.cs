@@ -39,6 +39,7 @@
             this.btnAddNewPlayer = new System.Windows.Forms.Button();
             this.btnStartGame = new System.Windows.Forms.Button();
             this.lvwGame = new System.Windows.Forms.ListView();
+            this.txtLog = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud3)).BeginInit();
@@ -102,7 +103,7 @@
             this.btnAddScore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddScore.Location = new System.Drawing.Point(232, 38);
             this.btnAddScore.Name = "btnAddScore";
-            this.btnAddScore.Size = new System.Drawing.Size(80, 20);
+            this.btnAddScore.Size = new System.Drawing.Size(82, 20);
             this.btnAddScore.TabIndex = 10;
             this.btnAddScore.Text = "Add";
             this.btnAddScore.UseVisualStyleBackColor = true;
@@ -133,7 +134,7 @@
             this.btnStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStartGame.Location = new System.Drawing.Point(272, 11);
             this.btnStartGame.Name = "btnStartGame";
-            this.btnStartGame.Size = new System.Drawing.Size(40, 20);
+            this.btnStartGame.Size = new System.Drawing.Size(42, 20);
             this.btnStartGame.TabIndex = 2;
             this.btnStartGame.Text = "Start";
             this.btnStartGame.UseVisualStyleBackColor = true;
@@ -144,16 +145,25 @@
             this.lvwGame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvwGame.Location = new System.Drawing.Point(12, 64);
             this.lvwGame.Name = "lvwGame";
-            this.lvwGame.Size = new System.Drawing.Size(300, 371);
+            this.lvwGame.Size = new System.Drawing.Size(302, 371);
             this.lvwGame.TabIndex = 11;
             this.lvwGame.UseCompatibleStateImageBehavior = false;
             this.lvwGame.View = System.Windows.Forms.View.Details;
+            // 
+            // txtLog
+            // 
+            this.txtLog.Location = new System.Drawing.Point(12, 441);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.Size = new System.Drawing.Size(302, 72);
+            this.txtLog.TabIndex = 12;
             // 
             // ZazziconeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 447);
+            this.ClientSize = new System.Drawing.Size(326, 525);
+            this.Controls.Add(this.txtLog);
             this.Controls.Add(this.lvwGame);
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.btnStartGame);
@@ -189,6 +199,7 @@
         private System.Windows.Forms.Button btnAddNewPlayer;
         private System.Windows.Forms.Button btnStartGame;
         private System.Windows.Forms.ListView lvwGame;
+        private System.Windows.Forms.TextBox txtLog;
     }
 }
 

@@ -19,5 +19,6 @@ namespace Launcher
         void SetCurrentPlayer(TPlayerViewModel playerViewModel);
         void AddScore(TPlayerViewModel playerViewModel, int score);
         void NewScoreSet();
+        void Log(string message);
     }
 }

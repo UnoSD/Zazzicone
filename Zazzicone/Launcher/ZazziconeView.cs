@@ -111,5 +111,14 @@ namespace Launcher
         }
 
         IEnumerable<int> GetCurrentScore() => _dicesControls.Select(down => (int)down.Value);
+
+        public void Log(string message)
+        {
+            txtLog.Text += $"{message}{Environment.NewLine}";
+
+            txtLog.Select(txtLog.Text.Length - 1, 0);
+
+            txtLog.ScrollToCaret();
+        }
     }
 }

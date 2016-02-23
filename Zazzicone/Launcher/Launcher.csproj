@@ -39,6 +39,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="EventArgs.cs" />
     <Compile Include="IGameEngine.cs" />
     <Compile Include="ILogger.cs" />

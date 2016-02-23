@@ -9,10 +9,12 @@ namespace Launcher
         [STAThread]
         static void Main()
         {
+            var zazziconeView = new ZazziconeView();
+
             IZazziconeController zazziconeController =
                 new ZazziconeController<ColumnHeader>
                 (
-                    new ZazziconeView(),
+                    zazziconeView,
                     new ZazziconeEngine
                     (
                         new ScoreGenerator<IEnumerable<int>, int>
@@ -20,7 +22,7 @@ namespace Launcher
                             new ZazziconeRulesAggregator()
                         ),
                         new ZazziconeRulesFactory(),
-                        new Logger()
+                        new Logger(zazziconeView.Log)
                     )
                 );
 
